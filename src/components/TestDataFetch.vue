@@ -1,8 +1,7 @@
 <template>
     <div>
       <h2>JSONBin Data Test</h2>
-      <pre>{{ testData }}</pre>
-     <ul>
+     <ul v-if="predictions.length">
         <li v-for="prediction in predictions" :key="prediction.id">
             <strong> {{ prediction.event }}</strong> by {{ prediction.author }}
             <p> {{ prediction.description }}</p>
@@ -70,7 +69,7 @@
       // For easy testing:
       testAddPrediction() {
         const samplePrediction = {
-          id: Date.now().toString(),
+          id: '1',
           event: 'Test Event',
           description: 'This is a test prediction.',
           date: '2050-01-01',
