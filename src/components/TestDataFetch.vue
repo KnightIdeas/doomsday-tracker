@@ -2,6 +2,13 @@
     <div>
       <h2>JSONBin Data Test</h2>
       <pre>{{ testData }}</pre>
+     <ul>
+        <li v-for="prediction in predictions" :key="prediction.id">
+            <strong> {{ prediction.event }}</strong> by {{ prediction.author }}
+            <p> {{ prediction.description }}</p>
+            <small> Status: {{ prediction.status }}</small>
+        </li>
+     </ul>
   
       <!-- Quick test button -->
       <button @click="testAddPrediction">Add Test Prediction</button>
