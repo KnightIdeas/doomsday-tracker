@@ -23,6 +23,10 @@ export default {
                     "X-Access-Key": import.meta.env.VITE_JSONBIN_X_ACCESS_KEY
                 },
                 body: JSON.stringify({
+                    record: {
+
+                    prediction:
+                    {
                     id: Date.now().toString(), // ✅ unique ID
                     event: 'Test Event',
                     description: 'This is a test prediction 2.',
@@ -31,6 +35,8 @@ export default {
                     author: 'Test Author',
                     source: 'https://example.com',
                     status: 'impending',
+                    }
+                }
                 })
             })
                 .then(response => response.json())
