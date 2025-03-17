@@ -69,7 +69,7 @@ export default {
                 console.error('There was an error!', error)
             })
             // Add data to the JSONBIN.io database
-            this.addData()  
+            addData()  
     }
 }
 </script>
