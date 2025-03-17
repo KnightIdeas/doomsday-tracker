@@ -3,7 +3,19 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  
+
+
+    <div class="wrapper">
+      <RouterLink to="/" class="logo">
+        <img src="./assets/logo.svg" alt="Vue logo" />
+      </RouterLink>
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/testdata">Test Data Fetch</RouterLink>
+      </nav>
+    </div>
+
 
   <RouterView />
 </template>
